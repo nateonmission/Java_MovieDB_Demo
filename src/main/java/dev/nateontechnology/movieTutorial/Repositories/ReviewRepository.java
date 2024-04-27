@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
-    Optional<Movie> findByImdbId(String movieImdbId);
-
+public interface ReviewRepository extends MongoRepository<Review, ObjectId> {
+    List<Review> findReviewsByAuthor(String author);
+    List<Review> findReviewsByMovieImdbId(String imdbId);
 
 
 }
